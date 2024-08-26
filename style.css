@@ -1,0 +1,217 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Style untuk navigasi bar dan logo*/
+header.navbar-container{
+    width: 100%;
+    max-width: 1200px;
+    padding-block: 1rem;
+    margin-inline: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+header.navbar-container .logo img{
+    width: 50px;
+}
+
+header.navbar-container .nav-list ul{
+    padding-left: 5px;
+
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li{
+    list-style-type: none;
+}
+
+header.navbar-container .nav-list li a{
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: black;
+
+    transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Style untuk slideshow*/
+.slideshow-container {
+    position: relative;
+    width: 100%;
+
+    height: auto;
+    justify-content: center;
+}
+
+.mySlides {
+    width: 100%;
+    height: auto; 
+    display: flex;
+    justify-content: center;
+}
+
+.mySlides img {
+    width: 100%; 
+    height: auto;
+    object-fit: cover; 
+    display: block;
+}
+
+.text{
+    color: white;
+    font-size: 24px;
+    padding: 12px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    text-shadow: 2px 2px #333;
+}
+
+/* Style untuk isi konten*/
+main {
+    flex: 1;
+    padding: 2rem;
+}
+
+h2 {
+    border-bottom: 2px solid black;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Style untuk artikel*/
+.flowers-container, .discounts-container, .cakegifts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.flower, .discount, .cakegift {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 2rem);
+    box-sizing: border-box;
+}
+
+.flower img, .discount img , .cakegift img {
+    max-width: 100%;
+    width: auto;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Style untuk button ("Beli sekarang")*/
+button {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Menetapkan style untuk strikethrough*/
+.strikethrough{
+    text-decoration: line-through;
+}
+
+/* Style untuk aside*/
+.aside{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.aside img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: center;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+
+.aside p {
+    margin: 0;
+}
+
+/* Style untuk footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Media Queries untuk web yang lebih responsif di ukuran device yang berbeda */
+@media (max-width: 768px) {
+    .flowers-container, .discounts-container, .cakegifts-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flower, .discount, .cakegift {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header.navbar-container .nav-list ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .text{
+        font-size:10px;
+        padding: 8px;
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+    }
+}
